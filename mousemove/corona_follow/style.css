@@ -11,6 +11,7 @@ body
     align-items: center;
     min-height: 100vh;
     background: #251801;
+    cursor: url('cursor.png'), pointer;
 }
 .container
 {
@@ -18,6 +19,7 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 .container .face
 {
@@ -39,6 +41,7 @@ body
 {
     content: '';
     position: absolute;
+    top: 180px;
     width: 150px;
     height: 70px;
     border-bottom-left-radius: 70px;
@@ -46,10 +49,19 @@ body
     background: #b57700;
     transition: 0.5s;
 }
+.container .face:hover:before
+{
+    top: 210px;
+    width: 150px;
+    height: 20px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background: #9d0b00;
+}
 .container .face .eyes
 {
     position: relative;
-    top: 0;
+    top: -40px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -69,7 +81,7 @@ body
     position: absolute;
     top: 50%;
     left: 25px;
-    transform: translate(-50px, -50%);
+    transform: translate(-50%, -50%);
     width: 40px;
     height: 40px;
     background: #333;
